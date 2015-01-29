@@ -1,0 +1,188 @@
+/* General Purpose Elements */
+
+*, h1 {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+body {
+	background: rgb(1, 37, 90) url("../images/cyber-security.jp") no-repeat center fixed;
+	background-size: cover;
+	color: rgb(84, 85, 91);
+	font: 1em 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+
+/* General Purpose Classes */
+
+.centre980 {
+	margin: 0 auto;
+	width: 980px;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+.padded {
+	padding: 20px;
+}
+
+/* Navigation Bar */
+
+#navigation-bar {
+	background-color: rgb(34, 35, 40);
+	height: 46px;
+}
+
+nav a {
+	color: white;
+	display: inline-block;
+	font-weight: bold;
+	padding: 11px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	color: rgb(240, 99, 44);
+}
+
+#navigation-list li {
+	display: inline;
+}
+
+
+/* Header */
+
+header {
+	background: url("../images/agency-logo.jpg") no-repeat center;
+	background-color: white;
+	background-size: 100% 100%;
+	/*box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);*/
+	height: 170px;
+	margin: 46px 0;
+	width: 420px;
+}
+
+header h1 {
+	display: none;
+}
+
+
+/* Page Content */
+
+#page-content {
+	margin-top: 20px;
+}
+
+
+/* Explanation */
+
+#explanation {
+	background-color: white;
+	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+	width: 440px;
+	padding-bottom: 0;
+}
+
+#explanation a {
+	color: rgb(5, 114, 218);
+	text-decoration: none;
+}
+
+#explanation h2 {
+	color: rgb(115, 4, 2);
+	padding-bottom: 20px;
+}
+
+#explanation p {
+	padding-bottom: 20px;
+}
+
+#explanation q {
+	margin-bottom: 20px;
+}
+
+
+/* List of Services */
+
+#service-list {
+	width: 480px;
+}
+
+#service-list a {
+	color: rgb(5, 114, 218);
+	text-decoration: none;
+}
+
+#service-list h2 a:hover {
+	color: rgb(240, 99, 44);
+}
+
+#service-list li {
+	box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.3);
+	padding: 20px 20px 0 20px;
+	margin-bottom: 20px;
+	z-index: -1;
+}
+
+.description {
+	padding: 20px 0;
+}
+
+#service1 {
+	background: white url("../images/keyperson-green.png") no-repeat top right;
+	background-size: 120px 65px;
+}
+
+#service2 {
+	background: white url("../images/keyperson-blue.png") no-repeat top right;
+	background-size: 120px 65px;
+}
+
+#service3 {
+	background: white url("../images/keyperson-purple.png") no-repeat top right;
+	background-size: 120px 65px;
+}
+
+#service4 {
+	background: white url("../images/keyperson-green-blue.png") no-repeat top right;
+	background-size: 120px 65px;
+}
+
+
+/* 
+
+Colour Palette
+
+dark		34, 35, 40
+grey		84, 85, 91
+blue		4, 60, 139
+navy		1, 37, 90
+crimson		115, 4, 2
+
+blue		5, 114, 218
+light blue	66, 163, 241
+orange		240, 99, 44
+red			217, 24, 1
+black		13, 13, 16
+
+Logos
+
+green		34, 177, 76
+blue		0, 0, 255
+purple		128, 0, 128
+
+*/

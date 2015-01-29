@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:text="#{home.welcome}">Welcome to the Agency Application</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" th:href="@{/css/normalize.css}" href="../static/css/normalize.css" />
+<link rel="stylesheet" th:href="@{/css/styles.css}" href="../static/css/styles.css" />
+</head>
+
+<body>
+
+	<div th:fragment="navigation-bar" id="navigation-bar">
+		<nav class="centre980">
+			<a th:href="@{/}" href="home.html">Home</a>
+			<ul id="navigation-list" class="right">
+				<li><a href="#">About</a></li>
+				<li><a href="#">QGCIDM</a></li>
+				<li><a href="#">Agency</a></li>
+				<li><a
+					th:text="${#httpServletRequest.remoteUser != null}? ${#httpServletRequest.remoteUser} + ' User' : 'Anonymous'"
+					th:href="@{/logout}" href="logout">Anonymous</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+
+	<div id="page-content" class="clear centre980">
+		<header>
+			<h1>Queensland Government Agency</h1>
+		</header>
+
+		<section id="explanation" class="left">
+			<h2>Agency Sample Application</h2>
+			<p>This is a sample application to demonstrate how the interaction with the Queensland
+				Government Client Identity Management System (QGCIDM) would work.</p>
+			<p>As a Queensland Government Agency, your website will make use of the QGCIDM in a similar
+				way to this. That is, your website may have a number of different services on it with different
+				security needs.</p>
+			<p>
+				<i>It will be up to you to determine which services require what level of protection.</i>
+			</p>
+			<p>Note the difference between a Credential Provider (CP) and an Identity (ID). CPs such as
+				Google or AUSKey are used to log on to the system while the ID is the actual user data that is
+				being protected.</p>
+			<p>
+				As a matter of privacy, the QGCIDM stores very minimal information about an individual. These
+				details are; first name, last name and date of birth. Other information, such as the user's
+				email address may be requested by your application however delivery is on a <a href="#">best
+					effort</a> basis.
+			</p>
+			<p>When a user verifies their identity documents online, the document details are discarded
+				and the user is left with a tick or cross against the particular document that has been shown.
+				Because sensitive user data is not kept, it cannot be lost or stolen.</p>
+		</section>
+
+		<ul id="service-list" class="right">
+			<li id="service1">
+				<h2>
+					<a th:href="@{/basic/success.html}" href="basic/success.html">Basic Security</a>
+				</h2>
+				<p class="sub-text">A basic CP with a basic ID.</p>
+				<p>This combination provides transactional continuity for services such as billing or
+					marketing, and is sufficient for most applications that require a user to log in and provide
+					minimal information about themselves.</p>
+			</li>
+			<li id="service2">
+				<h2>
+					<a th:href="@{/standard/success.html}" href="standard/success.html">Standard Security</a>
+				</h2>
+				<p class="sub-text">A secure CP with a verified ID.</p>
+				<p>
+					Used when the Agency service requires strong assurance that a person is who they say they are.
+					Forces a user to log in securely and to have verified a standard set of <a href="#">identity
+						documents</a> such as a Birth Certificate, Passport or Driver Licence.
+				</p>
+			</li>
+			<li id="service3">
+				<h2>
+					<a th:href="@{/restricted/success.html}" href="restricted/success.html">Restricted Security</a>
+				</h2>
+				<p class="sub-text">An extra secure CP with a true online ID.</p>
+				<p>
+					<b>Not yet implemented</b>. At present the technology required for this level of assurance is
+					not available. Requires biometrics and/or proof of <i>presence within the community</i> as well
+					as extra security measures during the log in process.
+				</p>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>

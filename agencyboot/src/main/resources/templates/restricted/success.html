@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" th:href="@{/css/normalize.css}" href="../../static/css/normalize.css" />
+<link rel="stylesheet" th:href="@{/css/styles.css}" href="../../static/css/styles.css" />
+</head>
+
+<body>
+	
+	<div th:include="home :: navigation-bar" id="navigation-bar">
+		<nav class="centre980">
+			<a th:href="@{/}" href="../home.html">Home</a>
+			<ul id="navigation-list" class="right">
+				<li><a href="#">About</a></li>
+				<li><a href="#">QGCIDM</a></li>
+				<li><a href="#">Agency</a></li>
+				<li><a href="#">Help</a></li>
+			</ul>
+		</nav>
+	</div>
+
+	<div id="page-content" class="clear centre980">
+		<section id="restricted-success">
+			<h2>Restricted Security Access Granted</h2>
+			<p>You have successfully authenticated at the restricted level. Your request was...</p>
+			<pre>
+&lt;samlp:AuthnRequest
+	xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
+	xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+	ID="aaf23196-1773-2113-474a-fe114412ab72"
+	Version="2.0"
+	IssueInstant="2004-12-05T09:21:59"
+	AssertionConsumerServiceIndex="0"
+	AttributeConsumingServiceIndex="0"&gt;
+	&lt;saml:Issuer>https://sp.example.com/SAML2&lt;/saml:Issuer&gt;
+	&lt;samlp:NameIDPolicy
+		AllowCreate="true"
+		Format="urn:oasis:names:tc:SAML:2.0:nameid-format:transient"/&gt;
+&lt;/samlp:AuthnRequest&gt;	
+			</pre>
+			<p>... and the response you got back from the QGCIDM was...</p>
+			<pre>
+&lt;samlp:AuthnRequest
+	xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
+	xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+	ID="aaf23196-1773-2113-474a-fe114412ab72"
+	Version="2.0"
+	IssueInstant="2004-12-05T09:21:59"
+	AssertionConsumerServiceIndex="0"
+	AttributeConsumingServiceIndex="0"&gt;
+	&lt;saml:Issuer>https://sp.example.com/SAML2&lt;/saml:Issuer&gt;
+	&lt;samlp:NameIDPolicy
+		AllowCreate="true"
+		Format="urn:oasis:names:tc:SAML:2.0:nameid-format:transient"/&gt;
+&lt;/samlp:AuthnRequest&gt;
+			</pre>
+		</section>	
+	</div>
+
+</body>
+</html>
